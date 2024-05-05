@@ -1,0 +1,97 @@
+"name"='start'
+    
+"by"='shahd tarek'
+    
+"start symbol" = <sequence>
+               
+!--- terminal ---
+ID={letter}+
+dg=('-'|'+')?{digit}+('.'{digit}+)?(('e'|('-'|'+')?{digit}+)'^'('-'|'+')?{digit}+('.' {digit}+)?)?
+st=[_]+{Alphanumeric}* 
+!+==> one or more   *==>zero or more  ?==>one or zero [a|b]==>a,b
+
+!---- rules----
+<sequence>::=welcome <sourcecode> goodbye
+           
+<sourcecode>::=<comment>
+             |<code> 
+             |<code><sourcecode>
+             
+<comment>::='$' <id> 
+          
+<id>::=ID
+     
+<code>::= <ass>
+       |<switch>
+       |<if>
+       |<for>
+       |<while>
+       |<do-while>
+       |<method>
+       |<callmeth>
+       |<print>
+       
+<ass>::= <id> '(' <datatype> ')' '=' <expr> ','
+      
+<print>::=print <id> |print <digit>| print<str>
+        |print<id> <print>
+        |print<digit><print>
+        |print<str><print>
+          
+      
+<datatype>::= int|string|double|float
+           
+<expr>::=<expr> '+' <multi>
+       |<expr> '-' <multi>
+       |<multi>
+       
+<multi>::= <multi> '*' <value> 
+        |<multi> '/' <value>
+        |<value>
+        
+<value>::= '('<value>')' 
+        |<id>
+        |<digit>
+        |<str>
+<digit>::=dg        
+<str>::='#' st '#' 
+      
+      
+<if> ::= ifstm '[' <cond> ']' '<' <code> '>'
+         |ifstm '[' <cond> ']' '<' <code> '>' else '<' <code> '>'
+      
+<cond> ::= <expr> <op> <expr>
+        
+<op>::= '>'
+     |'<'
+     |'>='
+     |'<='
+     |'=='
+     |'!='
+     
+<switch>::= <ass> swstm <expr> '[' <case-list> ']'
+         
+<case-list>::=case1 <expr> <code> break <case-list> 
+            |case2 <expr> <code> break <case-list> 
+            |case3 <expr> <code> break <case-list> 
+            |default <code> break 
+     
+<for>::=forstm '[' <ass> '.' <cond> '.' <incr>']' '<' <code> '>'
+      
+<incr>::=<id>'++'
+       |<id>'--'
+       |'++'<id>
+       |'--'<id>
+       |<ass>
+       
+<while>::= <ass> while '['<cond> '.'<incr> ']''<' <code> '>'
+        
+<do-while>::= do '[' <ass> '.' <cond> '.' <incr>']' while '<' <code> '>'
+       
+<method>::=<id> '[' <arg> ']' '<' <code> '>'
+         
+<arg>::= <expr> ',' <expr>
+      
+<callmeth>::=<id> '[' <arg> ']'
+      
+      

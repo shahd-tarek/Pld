@@ -1,0 +1,14 @@
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.csproj.AssemblyReference.cache
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.csproj.SuggestedBindingRedirects.cache
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.Form1.resources
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.Properties.Resources.resources
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.csproj.GenerateResource.cache
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.csproj.CoreCompileInputs.cache
+D:\Pld\pld_project\pld_project\bin\Debug\pld_project.exe.config
+D:\Pld\pld_project\pld_project\bin\Debug\pld_project.exe
+D:\Pld\pld_project\pld_project\bin\Debug\pld_project.pdb
+D:\Pld\pld_project\pld_project\bin\Debug\CalithaLib.dll
+D:\Pld\pld_project\pld_project\bin\Debug\GoldParserEngine.dll
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.csproj.CopyComplete
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.exe
+D:\Pld\pld_project\pld_project\obj\Debug\pld_project.pdb
